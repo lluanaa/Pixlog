@@ -116,6 +116,7 @@ pixlog-partners-system/
 │   ├── empresaRoutes.js
 │   ├── operadorRoutes.js
 │   ├── relatoriosRoutes.js
+├── migrations/        # Migrações do Sequelize
 ├── .env               # Exemplo do arquivo de configuração
 ├── package.json       # Dependências e scripts
 ├── README.md          # Documentação
