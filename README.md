@@ -7,7 +7,7 @@ Este projeto é um sistema desenvolvido como parte de um teste técnico, que tem
 - PostgreSQL
 - Sequelize
 
-## 🚀 Funcionalidades Implementadas
+## Funcionalidades Implementadas
 
 ### Empresas
 - **Cadastrar Empresa**  
@@ -39,25 +39,48 @@ Este projeto é um sistema desenvolvido como parte de um teste técnico, que tem
 
 ---
 
-## ✅ Testes Realizados
+## Testes realizados:
 
-### Parte das Empresas:
-- ✅ **Criação, edição, exclusão e listagem funcionam corretamente.**
-- ✅ **Validação de CNPJ e e-mail implementada.**
-- ✅ **Retorna lista de empresas ou uma empresa específica.**
-- ✅ **Não permite a criação de duas empresas com o mesmo nome.**
+## Parte das empresas:
 
-### Parte dos Operadores:
-- ✅ **Criação, edição, exclusão e listagem de operadores funcionam corretamente.**
-- ✅ **Permite associar e alterar empresas.**
-- ✅ **Permite nomes ou e-mails repetidos.**
-- ✅ **Busca retorna tanto o ID quanto o nome da empresa associada.**
+- ✅ **Empresa é criada** (permite criar apenas uma empresa por vez)
+- ✅ **Empresa é atualizada**
+- ✅ **Empresa é excluída**
+- ✅ **Empresa é encontrada**
+- ✅ **Depois de deletado, ele não encontra mais a empresa**
+- ✅ **Cada empresa tem um id único**
+- ✅ **Cada empresa tem um validador de CNPJ e e-mail**
+- ✅ **Retorna tanto uma empresa, quanto a lista de empresas, caso tenha mais de uma**
+- ✅ **Deixa cadastrar empresas com CNPJ incluindo caracteres especiais. Por exemplo: 36.896.836/0001-63**
+- ✅ **Não permite a criação de 2 empresas com o mesmo nome**
 
-### Parte dos Relatórios:
-- ✅ **Criação, edição, arquivamento/desarquivamento funcionam corretamente.**
-- ✅ **Filtros e paginação implementados.**
-- ✅ **Campos opcionais configurados como "null" quando não preenchidos.**
-- ✅ **Filtros retornam corretamente ou uma mensagem caso não haja resultados.**
+## Parte dos operadores:
+
+- ✅ **Operador é criado, com os campos obrigatórios e opcionais**
+- ✅ **Está atualizando os dados corretamente**
+- ✅ **Está apagando corretamente**
+- ✅ **É possível atualizar a empresa associada de um operador**
+- ✅ **Operadores sem uma empresa associada aparecem corretamente**
+- ✅ **Permite a criação de 2 operadores com o mesmo nome, por motivos de existir nomes comuns (Exemplo: João da Silva)**
+- ✅ **Permite a criação de 2 operadores com o mesmo e-mail, por motivos de existir e-mail empresarial compartilhado por vários funcionários.**
+- ✅ **Se uma empresa associada é excluída, na busca do operador aparece como "null" sendo possível depois associar uma empresa a um operador**
+- ✅ **Busca tanto um operador, quanto uma lista de operadores.**
+- ✅ **No retorno dos operadores volta o id da empresa_associada e o nome da empresa, por conta de que se houver várias empresas, pelo id não será possível distinguir**
+
+
+## Parte dos relatórios:
+
+- ✅ **Relatório é criado, com os campos obrigatórios e opcionais**
+- ✅ **Se os campos opcionais não forem preenchidos, fica como "null"**
+- ✅ **Ele permite gerar relatórios com os valores negativos também (não sei se é o caso)**
+- ✅ **Quando o relatório está com o status "Arquivado" ele não retorna na busca**
+- ✅ **Permite atualizar o status dos relatórios para "Não Arquivado" ou "Arquivado"**
+- ✅ **Relatório permite busca por filtros**
+- ✅ **Retornou pelo filtro de nome do operador**
+- ✅ **Caso não tenha relatórios no filtro selecionado, retorna a mensagem correta**
+- ✅ **Caso algum dado seja excluído, ao pesquisar o filtro, o campo excluído fica como "null"**
+- ✅ **Arquiva e desarquiva relatórios pelo id**
+- ✅ **Realiza a busca por todos os filtros**
 
 ---
 
@@ -116,6 +139,7 @@ pixlog-partners-system/
 │   ├── empresaRoutes.js
 │   ├── operadorRoutes.js
 │   ├── relatoriosRoutes.js
+├── migrations/        # Migrações do Sequelize
 ├── .env               # Exemplo do arquivo de configuração
 ├── package.json       # Dependências e scripts
 ├── README.md          # Documentação
