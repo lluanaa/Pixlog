@@ -110,6 +110,67 @@ Este projeto é um sistema desenvolvido como parte de um teste técnico, que tem
 
 ---
 
+## Como testar (exemplo no  **Insomnia**):
+
+1. **Empresas**:
+    
+    - Criar: `POST http://localhost:3000/api/empresas`
+    - Listar: `GET http://localhost:3000/api/empresas`
+    - Editar: `PUT http://localhost:3000/api/empresas/:id`
+    - Excluir: `DELETE http://localhost:3000/api/empresas/:id`
+  
+**URL de exemplo (post) -**
+```
+  {
+    "nome": "Pixlog",
+    "cnpj": "12345678000195",
+    "endereco": "Rua Exemplo, 123",
+    "telefone": "11999999999",
+    "email": "contato@pixlog.com"
+  }
+```
+      
+2. **Operadores**:
+    
+    - Criar: `POST http://localhost:3000/api/operadores`
+    - Listar: `GET http://localhost:3000/api/operadores`
+    - Editar: `PUT http://localhost:3000/api/operadores/:id`
+    - Excluir: `DELETE http://localhost:3000/api/operadores/:id`
+      
+**URL de exemplo (post) -**
+```
+      {
+               "nome": "Luana da Silva" ,
+               "cargo": "Desenvolvedora",
+               "telefone": "469999192408",
+	       "empresa": "Pixlog",
+               "email": "lstylik1345@gmail.com"
+}
+```
+      
+3. **Relatórios**:
+    
+    - Criar: `POST http://localhost:3000/api/relatorios`
+    - Listar: `GET http://localhost:3000/api/relatorios`
+    - Arquivar: `PUT http://localhost:3000/api/relatorios/arquivar/:id`
+    - Desarquivar: `PUT http://localhost:3000/api/relatorios/desarquivar/:id`
+
+**URL de exemplo (post) -**
+```
+{
+  "titulo": "Relatório 10",
+  "descricao": "Relatório para análise de pilha",
+  "empresa_associada": "Pixlog",
+  "operador": "Luana da Silva",
+  "volume": 100.5,
+  "horario": "2024-11-22T10:00:00Z",
+  "comprimento": 50,
+  "status": "Não arquivado",
+  "info_adicional": "informações adicionais"
+}
+```
+---
+
 ## 🌐 Banco de Dados Online
 
 O sistema está conectado a um banco PostgreSQL hospedado no Railway. Para testar diretamente, você pode usar a URL:
