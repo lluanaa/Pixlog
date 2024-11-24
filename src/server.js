@@ -7,7 +7,7 @@ const relatorioRouter = require('./routes/relatoriosRoutes');
 const app = express();
 app.use(express.json());
 
-sequelize.sync({ force: true })
+sequelize.sync()
     .then(() => {
         console.log('Tabelas criadas com sucesso');
     })
