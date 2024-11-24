@@ -119,7 +119,8 @@ Este projeto é um sistema desenvolvido como parte de um teste técnico, que tem
     - Editar: `PUT http://localhost:3000/api/empresas/:id`
     - Excluir: `DELETE http://localhost:3000/api/empresas/:id`
   
-URL de exemplo (post) -
+**URL de exemplo (post) -**
+```
   {
     "nome": "Pixlog",
     "cnpj": "12345678000195",
@@ -127,6 +128,7 @@ URL de exemplo (post) -
     "telefone": "11999999999",
     "email": "contato@pixlog.com"
   }
+```
       
 2. **Operadores**:
     
@@ -134,14 +136,17 @@ URL de exemplo (post) -
     - Listar: `GET http://localhost:3000/api/operadores`
     - Editar: `PUT http://localhost:3000/api/operadores/:id`
     - Excluir: `DELETE http://localhost:3000/api/operadores/:id`
-URL de exemplo (post) -
+      
+**URL de exemplo (post) -**
+```
       {
                "nome": "Luana da Silva" ,
                "cargo": "Desenvolvedora",
                "telefone": "469999192408",
-							 "empresa": "Pixlog",
+	       "empresa": "Pixlog",
                "email": "lstylik1345@gmail.com"
 }
+```
       
 3. **Relatórios**:
     
@@ -150,7 +155,8 @@ URL de exemplo (post) -
     - Arquivar: `PUT http://localhost:3000/api/relatorios/arquivar/:id`
     - Desarquivar: `PUT http://localhost:3000/api/relatorios/desarquivar/:id`
 
-URL de exemplo (post) - 
+**URL de exemplo (post) -**
+```
 {
   "titulo": "Relatório 10",
   "descricao": "Relatório para análise de pilha",
@@ -160,8 +166,9 @@ URL de exemplo (post) -
   "horario": "2024-11-22T10:00:00Z",
   "comprimento": 50,
   "status": "Não arquivado",
-	"info_adicional": "informações adicionais"
+  "info_adicional": "informações adicionais"
 }
+```
 ---
 
 ## 🌐 Banco de Dados Online
