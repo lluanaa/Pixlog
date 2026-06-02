@@ -84,7 +84,7 @@ Este projeto é um sistema desenvolvido como parte de um teste técnico, que tem
 
 ---
 
-## 📝 Como Rodar o Projeto Localmente
+## Como Rodar o Projeto Localmente
 
 1. **Clone o repositório**:
    ```bash
