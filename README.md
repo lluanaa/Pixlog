@@ -171,7 +171,7 @@ Este projeto é um sistema desenvolvido como parte de um teste técnico, que tem
 ```
 ---
 
-## 🌐 Banco de Dados Online
+## Banco de Dados Online
 
 O sistema está conectado a um banco PostgreSQL hospedado no Railway. Para testar diretamente, você pode usar a URL:
 
@@ -181,7 +181,7 @@ postgresql://postgres:VGZCqCMbEKDzxYEfbPvgdEOJrHJplkQy@junction.proxy.rlwy.net:5
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```plaintext
 pixlog-partners-system/
